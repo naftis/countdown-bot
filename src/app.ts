@@ -1,6 +1,9 @@
 process.env.NTBA_FIX_319 = '😋'; // Gets rid of node-telegram-bot-api warnings
 process.env.NTBA_FIX_350 = '😋'; // -//-
 
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import * as schedule from 'node-schedule';
 import * as TelegramBot from 'node-telegram-bot-api';
 
