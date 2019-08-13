@@ -33,6 +33,9 @@ function getMessage() {
 
 schedule.scheduleJob('1 7 * * *', () => {
   if (new Date() < new Date(endDate)) {
-    bot.sendMessage(chatId, getMessage());
+    bot.sendMessage(chatId, getMessage(), {
+      parse_mode: 'Markdown',
+      disable_notification: true,
+    });
   }
 });
